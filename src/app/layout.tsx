@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Le Lotus – Restaurant Vietnamien | Fribourg, Suisse",
+  title: "Le Lotus - Vietnamese Restaurant | Fribourg, Switzerland",
   description:
     "Restaurant vietnamien authentique à Fribourg. Cuisine fait maison avec des produits frais. Pho, vermicelles, plats du jour. Sur place, à emporter & traiteur. Boulevard de Pérolles 81.",
   keywords: [
