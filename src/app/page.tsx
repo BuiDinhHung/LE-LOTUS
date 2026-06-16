@@ -6,10 +6,12 @@ import MenuDuJour from "@/components/sections/MenuDuJour";
 import ALaCarte from "@/components/sections/ALaCarte";
 import Evenement from "@/components/sections/Evenement";
 import Hours from "@/components/sections/Hours";
+import BanhMiPopup from "@/components/sections/BanhMiPopup";
 
 export default function Home() {
   return (
     <>
+      <BanhMiPopup />
       <Navbar />
       <main>
         <Hero />

@@ -168,76 +168,17 @@ export default function Hero() {
 
 function HeroLotus() {
   return (
-    <svg
-      viewBox="0 0 80 88"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-16 h-16 md:w-20 md:h-20"
-    >
-      {/* Center petal */}
-      <path
-        d="M40 8 C32 18 28 32 28 46 C28 56 33 62 40 62 C47 62 52 56 52 46 C52 32 48 18 40 8Z"
-        stroke="#d45020"
-        strokeWidth="1.8"
-        fill="rgba(212,80,32,0.12)"
-      />
-      {/* Left inner petal */}
-      <path
-        d="M28 46 C22 36 14 30 8 33 C4 37 7 47 17 52 C23 55 31 55 40 62"
-        stroke="#d45020"
-        strokeWidth="1.8"
-        fill="rgba(212,80,32,0.08)"
-      />
-      {/* Right inner petal */}
-      <path
-        d="M52 46 C58 36 66 30 72 33 C76 37 73 47 63 52 C57 55 49 55 40 62"
-        stroke="#d45020"
-        strokeWidth="1.8"
-        fill="rgba(212,80,32,0.08)"
-      />
-      {/* Left outer petal */}
-      <path
-        d="M17 52 C8 48 0 46 0 52 C0 58 8 64 20 64 C27 64 33 62 40 62"
-        stroke="#d45020"
-        strokeWidth="1.4"
-        fill="rgba(212,80,32,0.05)"
-        opacity="0.8"
-      />
-      {/* Right outer petal */}
-      <path
-        d="M63 52 C72 48 80 46 80 52 C80 58 72 64 60 64 C53 64 47 62 40 62"
-        stroke="#d45020"
-        strokeWidth="1.4"
-        fill="rgba(212,80,32,0.05)"
-        opacity="0.8"
-      />
-      {/* Center dot */}
-      <circle cx="40" cy="62" r="2.5" fill="#d45020" />
-      {/* Stem */}
-      <line
-        x1="40"
-        y1="64.5"
-        x2="40"
-        y2="80"
-        stroke="#2d5416"
-        strokeWidth="1.8"
-      />
-      {/* Left leaf */}
-      <path
-        d="M40 74 Q30 66 22 70"
-        stroke="#2d5416"
-        strokeWidth="1.4"
-        fill="none"
-        opacity="0.8"
-      />
-      {/* Right leaf */}
-      <path
-        d="M40 74 Q50 66 58 70"
-        stroke="#2d5416"
-        strokeWidth="1.4"
-        fill="none"
-        opacity="0.8"
-      />
-    </svg>
+    <img
+      src="/images/b2354c6f-03fc-4264-bc68-27805167adab.png"
+      alt="Le Lotus"
+      className="w-56 h-56 md:w-72 md:h-72"
+      style={{
+        objectFit: "contain",
+        mixBlendMode: "screen",
+        maskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 42%, transparent 100%)",
+        WebkitMaskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 42%, transparent 100%)",
+        filter: "drop-shadow(0 0 20px rgba(212,80,32,0.5))",
+      }}
+    />
   );
 }

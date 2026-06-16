@@ -5,14 +5,15 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { imgSrc } from "@/lib/utils";
 import menuData from "@/data/menu.json";
 
-type Tab = "entrees" | "soupes" | "plats" | "combo" | "boissons";
+type Tab = "entrees" | "soupes" | "plats" | "sandwichs" | "combo" | "boissons";
 
 const tabs: { id: Tab; label: string; emoji: string }[] = [
-  { id: "entrees",  label: "Entrées",         emoji: "🥟" },
-  { id: "soupes",   label: "Soupes",           emoji: "🍜" },
-  { id: "plats",    label: "Plats Principaux", emoji: "🍽️" },
-  { id: "combo",    label: "Combo",            emoji: "🍱" },
-  { id: "boissons", label: "Boissons",         emoji: "🧋" },
+  { id: "entrees",   label: "Entrées",         emoji: "🥟" },
+  { id: "soupes",    label: "Soupes",           emoji: "🍜" },
+  { id: "plats",     label: "Plats Principaux", emoji: "🍽️" },
+  { id: "sandwichs", label: "Bánh Mì",          emoji: "🥖" },
+  { id: "combo",     label: "Combo",            emoji: "🍱" },
+  { id: "boissons",  label: "Boissons",         emoji: "🧋" },
 ];
 
 interface MenuItem {
@@ -32,10 +33,12 @@ function MenuCard({
   item,
   index,
   showSteam = false,
+  rotateImage = false,
 }: {
   item: MenuItem;
   index: number;
   showSteam?: boolean;
+  rotateImage?: boolean;
 }) {
   return (
     <motion.div
@@ -64,8 +67,9 @@ function MenuCard({
           src={imgSrc(item.image)}
           alt={item.nom}
           loading="lazy"
-          className="w-full h-full object-contain"
-          whileHover={{ scale: 1.09, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
+          className={`w-full h-full ${rotateImage ? "object-cover" : "object-contain"}`}
+          style={rotateImage ? { transform: "rotate(90deg) scale(1.35)" } : undefined}
+          whileHover={{ scale: rotateImage ? 1.22 : 1.09, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
         />
 
         {/* Steam effect for soups */}
@@ -180,6 +184,17 @@ function PlatsPanel() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {menuData.alaCarte.plats.map((item, i) => (
         <MenuCard key={item.id} item={item} index={i} />
+      ))}
+    </div>
+  );
+}
+
+function SandwichsPanel() {
+  const items = (menuData.alaCarte as unknown as { sandwichs: MenuItem[] }).sandwichs;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      {items.map((item, i) => (
+        <MenuCard key={item.id} item={item} index={i} rotateImage={item.id === "sw1"} />
       ))}
     </div>
   );
@@ -369,11 +384,12 @@ function BoissonPanel() {
    Main component
 ───────────────────────────────────────────── */
 const panels = {
-  entrees:  EntreesPanel,
-  soupes:   SoupesPanel,
-  plats:    PlatsPanel,
-  combo:    ComboPanel,
-  boissons: BoissonPanel,
+  entrees:   EntreesPanel,
+  soupes:    SoupesPanel,
+  plats:     PlatsPanel,
+  sandwichs: SandwichsPanel,
+  combo:     ComboPanel,
+  boissons:  BoissonPanel,
 } as const;
 
 export default function ALaCarte() {

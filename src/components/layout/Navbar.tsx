@@ -51,33 +51,13 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-28 flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => handleNavClick("#accueil")}
-            className="flex items-center gap-3 group"
+            className="group"
           >
-            <LotusLogo
-              className={`w-9 h-9 transition-colors duration-500 ${
-                scrolled ? "text-copper" : "text-copper"
-              }`}
-            />
-            <div className="flex flex-col leading-none">
-              <span
-                className={`font-serif text-xl tracking-[0.15em] transition-colors duration-500 ${
-                  scrolled ? "text-dark" : "text-white"
-                }`}
-              >
-                LE LOTUS
-              </span>
-              <span
-                className={`text-[9px] tracking-[0.35em] uppercase transition-colors duration-500 ${
-                  scrolled ? "text-copper" : "text-white/70"
-                }`}
-              >
-                Spécialités Vietnamiennes
-              </span>
-            </div>
+            <LotusLogo className="h-24 w-auto transition-all duration-500" />
           </button>
 
           {/* Desktop Nav */}
@@ -144,11 +124,8 @@ export default function Navbar() {
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 h-20 border-b border-white/10">
-              <div className="flex items-center gap-3">
-                <LotusLogo className="w-8 h-8 text-copper" />
-                <span className="font-serif text-xl tracking-[0.15em] text-white">
-                  LE LOTUS
-                </span>
+              <div className="flex items-center">
+                <LotusLogo className="h-12 w-auto" />
               </div>
               <button
                 onClick={() => setMenuOpen(false)}
@@ -207,54 +184,11 @@ export default function Navbar() {
 
 function LotusLogo({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 40 44"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <img
+      src="/images/logo.png"
+      alt="Le Lotus"
       className={className}
-    >
-      <path
-        d="M20 4 C15 10 13 20 13 28 C13 34 16 38 20 38 C24 38 27 34 27 28 C27 20 25 10 20 4Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-      />
-      <path
-        d="M13 28 C9 22 4 18 2 20 C0 23 2 30 9 34 C13 36 17 36 20 38"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-      />
-      <path
-        d="M27 28 C31 22 36 18 38 20 C40 23 38 30 31 34 C27 36 23 36 20 38"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-      />
-      <path
-        d="M9 34 C5 30 0 28 0 32 C0 36 5 40 12 40 C15 40 18 39 20 38"
-        stroke="currentColor"
-        strokeWidth="1.1"
-        fill="none"
-        opacity="0.6"
-      />
-      <path
-        d="M31 34 C35 30 40 28 40 32 C40 36 35 40 28 40 C25 40 22 39 20 38"
-        stroke="currentColor"
-        strokeWidth="1.1"
-        fill="none"
-        opacity="0.6"
-      />
-      <circle cx="20" cy="38" r="1.5" fill="currentColor" />
-      <line
-        x1="20"
-        y1="39.5"
-        x2="20"
-        y2="44"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        opacity="0.5"
-      />
-    </svg>
+      style={{ objectFit: "contain" }}
+    />
   );
 }

@@ -4,15 +4,17 @@ import { MapPin, Phone, Facebook, Instagram, Clock, ArrowUp } from "lucide-react
 
 function LotusLogoFooter() {
   return (
-    <svg viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <path d="M20 4 C15 10 13 20 13 28 C13 34 16 38 20 38 C24 38 27 34 27 28 C27 20 25 10 20 4Z" stroke="#d45020" strokeWidth="1.4" fill="rgba(212,80,32,0.1)" />
-      <path d="M13 28 C9 22 4 18 2 20 C0 23 2 30 9 34 C13 36 17 36 20 38" stroke="#d45020" strokeWidth="1.4" fill="none" />
-      <path d="M27 28 C31 22 36 18 38 20 C40 23 38 30 31 34 C27 36 23 36 20 38" stroke="#d45020" strokeWidth="1.4" fill="none" />
-      <path d="M9 34 C5 30 0 28 0 32 C0 36 5 40 12 40 C15 40 18 39 20 38" stroke="#d45020" strokeWidth="1.1" fill="none" opacity="0.6" />
-      <path d="M31 34 C35 30 40 28 40 32 C40 36 35 40 28 40 C25 40 22 39 20 38" stroke="#d45020" strokeWidth="1.1" fill="none" opacity="0.6" />
-      <circle cx="20" cy="38" r="1.5" fill="#d45020" />
-      <line x1="20" y1="39.5" x2="20" y2="44" stroke="#2d5416" strokeWidth="1.2" opacity="0.5" />
-    </svg>
+    <img
+      src="/images/b2354c6f-03fc-4264-bc68-27805167adab.png"
+      alt="Le Lotus"
+      className="w-12 h-12"
+      style={{
+        objectFit: "contain",
+        mixBlendMode: "screen",
+        maskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 38%, transparent 100%)",
+        WebkitMaskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 38%, transparent 100%)",
+      }}
+    />
   );
 }
 
