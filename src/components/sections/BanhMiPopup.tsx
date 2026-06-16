@@ -5,21 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { imgSrc } from "@/lib/utils";
 
-const SESSION_KEY = "banhmipopup_v1";
-
 export default function BanhMiPopup() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    if (!sessionStorage.getItem(SESSION_KEY)) {
-      const t = setTimeout(() => setShow(true), 1400);
-      return () => clearTimeout(t);
-    }
+    const t = setTimeout(() => setShow(true), 1400);
+    return () => clearTimeout(t);
   }, []);
 
   const close = () => {
     setShow(false);
-    sessionStorage.setItem(SESSION_KEY, "1");
   };
 
   return (
