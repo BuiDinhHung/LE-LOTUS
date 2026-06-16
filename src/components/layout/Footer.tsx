@@ -211,7 +211,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <p className="text-white/20 text-xs tracking-wider">
-              © {new Date().getFullYear()} Le Lotus · Fribourg
+              Copyright © {new Date().getFullYear()} Hoangcaster
             </p>
             <button
               onClick={scrollToTop}
