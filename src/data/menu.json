@@ -1,0 +1,262 @@
+{
+  "menuDuJour": [
+    {
+      "id": 1,
+      "titre": "Menu du Jour 01",
+      "description": "Soupe Pho au bœuf ou Vermicelles sautées, avec boisson incluse",
+      "prix": "Fr 18.50",
+      "image": "WhatsApp Image 2026-06-12 at 02.23.11 (4).jpeg",
+      "badge": "Populaire"
+    },
+    {
+      "id": 2,
+      "titre": "Menu du Jour 02",
+      "description": "Soupe de nouilles ou plat du jour au choix, avec boisson incluse",
+      "prix": "Fr 18.50",
+      "image": "WhatsApp Image 2026-06-12 at 02.23.11 (3).jpeg",
+      "badge": null
+    },
+    {
+      "id": 3,
+      "titre": "Menu du Jour 03",
+      "description": "Plat principal vietnamien fait maison, avec riz et soupe inclus",
+      "prix": "Fr 18.50",
+      "image": "WhatsApp Image 2026-06-12 at 02.23.11 (2).jpeg",
+      "badge": "Coup de cœur"
+    },
+    {
+      "id": 4,
+      "titre": "Menu du Jour 04",
+      "description": "Spécialité du jour préparée avec des produits frais de saison",
+      "prix": "Fr 18.50",
+      "image": "WhatsApp Image 2026-06-12 at 02.23.11 (1).jpeg",
+      "badge": null
+    },
+    {
+      "id": 5,
+      "titre": "Menu du Jour 05",
+      "description": "Menu végétarien du jour – tofu, légumes frais, soupe et boisson",
+      "prix": "Fr 18.50",
+      "image": "WhatsApp Image 2026-06-12 at 02.23.11.jpeg",
+      "badge": "Végétarien"
+    }
+  ],
+  "alaCarte": {
+    "entrees": [
+      {
+        "id": "e1",
+        "nom": "Rouleaux de Printemps Frits",
+        "description": "Rouleaux de printemps au porc, crevettes, légumes (fait maison)",
+        "prix": "Fr 6.-",
+        "portion": "2 pièces",
+        "image": "Rouleaux de printemps.png",
+        "tag": "Maison"
+      },
+      {
+        "id": "e2",
+        "nom": "Rouleaux de Printemps Végétarien",
+        "description": "Rouleaux de printemps végétariens (fait maison)",
+        "prix": "Fr 5.-",
+        "portion": "2 pièces",
+        "image": "Rouleaux de printemps.png",
+        "tag": "Végétarien"
+      },
+      {
+        "id": "e3",
+        "nom": "Raviolis Frits",
+        "description": "Raviolis au porc, crevettes (fait maison)",
+        "prix": "Fr 8.-",
+        "portion": "4 pièces",
+        "image": "Raviolis Frits.png",
+        "tag": "Maison"
+      },
+      {
+        "id": "e4",
+        "nom": "Beignets de Crevettes Croustillants",
+        "description": "Beignets de crevettes croustillants",
+        "prix": "Fr 6.-",
+        "portion": "6 pièces",
+        "image": "Beignets de Crevettes croustillants.png",
+        "tag": null
+      },
+      {
+        "id": "e5",
+        "nom": "Assortiment d'Entrées",
+        "description": "2 rouleaux de printemps + raviolis (porc et crevettes) + 4 beignets de crevettes",
+        "prix": "Fr 16.50",
+        "portion": null,
+        "image": "Assortiment d'entrées.png",
+        "tag": "À partager"
+      }
+    ],
+    "soupes": [
+      {
+        "id": "s1",
+        "nom": "Soupe Pho",
+        "description": "Soupe de bœuf, épices avec nouilles de riz",
+        "prix": "Fr 21.50",
+        "image": "SOUPE PHO.png",
+        "tag": "Signature"
+      },
+      {
+        "id": "s2",
+        "nom": "Soupe Pho au Poulet",
+        "description": "Soupe de poulet, épices avec nouilles de riz",
+        "prix": "Fr 21.50",
+        "image": "SOUPE PHO AU POULET.png",
+        "tag": null
+      },
+      {
+        "id": "s3",
+        "nom": "Soupe Pho Végétarienne",
+        "description": "Soupe de tofu, épices avec nouilles de riz, légumes",
+        "prix": "Fr 20.50",
+        "image": "SOUPE PHO VÉGÉTARIENNE.png",
+        "tag": "Végétarien"
+      },
+      {
+        "id": "s4",
+        "nom": "Hu Tieu Xa Xiu",
+        "description": "Soupe de nouilles de riz avec du porc xa xiu et crevettes",
+        "prix": "Fr 21.50",
+        "image": "HU TIEU XA XIU.png",
+        "tag": null
+      },
+      {
+        "id": "s5",
+        "nom": "Hu Tieu Végétarien",
+        "description": "Soupe de nouilles de riz avec du tofu, légumes",
+        "prix": "Fr 20.50",
+        "image": "HU TIEU VÉGÉTARIEN.png",
+        "tag": "Végétarien"
+      },
+      {
+        "id": "s6",
+        "nom": "Bun Bo Hué",
+        "description": "Soupe de nouilles de riz, bœuf, épicées de Huế, légumes",
+        "prix": "Fr 21.50",
+        "image": "BUN BO HUE.png",
+        "tag": "Épicé"
+      }
+    ],
+    "plats": [
+      {
+        "id": "p1",
+        "nom": "Vermicelles Sautées aux Crevettes",
+        "description": "Vermicelles de riz, crevettes à l'ail, 1 rouleau de printemps, salades",
+        "prix": "Fr 19.-",
+        "image": "VERMICELLES SAUTÉES AUX CREVETTES.png",
+        "tag": null
+      },
+      {
+        "id": "p2",
+        "nom": "Vermicelles Sautées au Bœuf",
+        "description": "Vermicelles de riz, bœuf, 1 ravioli ou 1 rouleau de printemps, salades, oignons",
+        "prix": "Fr 19.-",
+        "image": "VERMICELLES SAUTÉES AU BOEUF.png",
+        "tag": null
+      },
+      {
+        "id": "p3",
+        "nom": "Vit Quay + Bánh Hỏi",
+        "description": "Canard laqué & galettes de vermicelles de riz avec salades",
+        "prix": "Fr 20.-",
+        "image": "bánh hỏi vịt quay.png",
+        "tag": "Spécialité"
+      },
+      {
+        "id": "p4",
+        "nom": "Heo Quay & Bánh Hỏi",
+        "description": "Porc laqué & galettes de vermicelles de riz avec salade",
+        "prix": "Fr 20.-",
+        "image": "banh hỏi heo quay.png",
+        "tag": "Spécialité"
+      }
+    ],
+    "combo": [
+      {
+        "id": "c1",
+        "nom": "Thit Kho Trung",
+        "description": "Porc au caramel, œufs mijotés au jus de coco. Servi avec du riz nature ou cantonais et une soupe",
+        "prix": "Fr 21.-",
+        "image": "THIt KHO TRUNG.png",
+        "tag": "Spécialité"
+      },
+      {
+        "id": "c2",
+        "nom": "Com Tam",
+        "description": "Servi avec du riz nature, œuf au plat, légumes et une soupe",
+        "prix": "Fr 21.-",
+        "image": "cơm tấm.png",
+        "tag": "Populaire"
+      },
+      {
+        "id": "c3",
+        "nom": "Crevettes Marinées",
+        "description": "Servi avec du riz nature, crevettes marinées avec légumes et une soupe",
+        "prix": "Fr 18.-",
+        "image": "CREVETTES MARINÉES.png",
+        "tag": null
+      },
+      {
+        "id": "c4",
+        "nom": "Poulet Xa Xiu",
+        "description": "Poulet xa xiu avec légumes. Servi avec du riz nature ou cantonais et une soupe",
+        "prix": "Fr 18.-",
+        "image": "WhatsApp Image 2026-06-12 at 13.09.45 (1).jpeg",
+        "tag": null
+      },
+      {
+        "id": "c5",
+        "nom": "Porc Mariné",
+        "description": "Servi avec du riz nature ou du riz cantonais, légumes et une soupe",
+        "prix": "Fr 18.-",
+        "image": "PORC MARINÉ.png",
+        "tag": null
+      }
+    ],
+    "boissons": {
+      "speciales": [
+        {
+          "id": "b1",
+          "nom": "Thé Froid Pêche Citron Maison",
+          "description": "Thé glacé artisanal à la pêche et citron, préparé chaque jour",
+          "prix": "Fr 5.-",
+          "image": "Thé froid  péche avec citron ( fait maison).png"
+        },
+        {
+          "id": "b2",
+          "nom": "Thé Glacé Violet au Litchi",
+          "description": "Thé aux fleurs de papillon bleue avec des notes de litchi, fait maison",
+          "prix": "Fr 5.-",
+          "image": "Thé glacé violet au Lichi.png"
+        },
+        {
+          "id": "b3",
+          "nom": "Spécialité Café Vietnamien Glacé",
+          "description": "Café robusta vietnamien sur lait concentré sucré et glaçons",
+          "prix": "Fr 7.-",
+          "image": "caffee.png"
+        }
+      ],
+      "avecImage": [
+        { "id": "ba1", "nom": "Espresso / Café Vietnamien Chaud", "prix": "Fr 3.-", "image": "boisson-cafe-chaud.png" },
+        { "id": "ba2", "nom": "Café Vietnamien", "prix": "Fr 3.50", "image": "boisson-cafe.png" },
+        { "id": "ba3", "nom": "Thé au Gingembre Frais", "prix": "Fr 3.50", "image": "boisson-gingembre.png" },
+        { "id": "ba4", "nom": "Thé au Jasmin Chaud", "prix": "Fr 3.50", "image": "boisson-jasmin.png" },
+        { "id": "ba5", "nom": "Coca · Fanta · Sprite", "prix": "Fr 2.50", "image": "boisson-soda.png" },
+        { "id": "ba6", "nom": "Thé Oishi Miel Citron", "prix": "Fr 3.50", "image": "boisson-citron.png" },
+        { "id": "ba7", "nom": "Litchi", "prix": "Fr 3.50", "image": "boisson-litchi.png" },
+        { "id": "ba8", "nom": "Vins Ouverts", "prix": "À confirmer", "image": "boisson-vin.png" }
+      ],
+      "autres": [
+        { "nom": "Coca-Cola Zero", "prix": "Fr 2.50" },
+        { "nom": "Eau Minérale", "prix": "Fr 2.50" },
+        { "nom": "Thé Froid", "prix": "Fr 2.50" },
+        { "nom": "Jus de Coco", "prix": "Fr 3.50" },
+        { "nom": "Vin en Bouteille", "prix": "À confirmer" },
+        { "nom": "Eau Plate", "prix": "Offerte avec le repas" }
+      ]
+    }
+  }
+}
