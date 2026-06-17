@@ -24,6 +24,7 @@ interface MenuItem {
   image: string;
   tag: string | null;
   portion?: string;
+  imageRotate?: number;
 }
 
 /* ─────────────────────────────────────────────
@@ -33,12 +34,10 @@ function MenuCard({
   item,
   index,
   showSteam = false,
-  rotateImage = false,
 }: {
   item: MenuItem;
   index: number;
   showSteam?: boolean;
-  rotateImage?: boolean;
 }) {
   return (
     <motion.div
@@ -67,9 +66,9 @@ function MenuCard({
           src={imgSrc(item.image)}
           alt={item.nom}
           loading="lazy"
-          className={`w-full h-full ${rotateImage ? "object-cover" : "object-contain"}`}
-          style={rotateImage ? { transform: "rotate(90deg) scale(1.35)" } : undefined}
-          whileHover={{ scale: rotateImage ? 1.22 : 1.09, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
+          className="w-full h-full object-cover object-center"
+          style={item.imageRotate ? { transform: `rotate(${item.imageRotate}deg) scale(1.1)` } : undefined}
+          whileHover={item.imageRotate ? undefined : { scale: 1.06, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
         />
 
         {/* Steam effect for soups */}

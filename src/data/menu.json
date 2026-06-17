@@ -222,7 +222,8 @@
         "description": "Poulet xa xiu avec légumes. Servi avec du riz nature ou cantonais et une soupe",
         "prix": "Fr 18.-",
         "image": "WhatsApp Image 2026-06-12 at 13.09.45 (1).jpeg",
-        "tag": null
+        "tag": null,
+        "imageRotate": -90
       },
       {
         "id": "c5",
