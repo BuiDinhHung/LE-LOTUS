@@ -8,10 +8,12 @@ const banners = [
   {
     src: "WhatsApp Image 2026-06-12 at 02.22.05.jpeg",
     alt: "Nos plats – Le Lotus Take Away",
+    tab: null,
   },
   {
     src: "WhatsApp Image 2026-06-12 at 02.24.48.jpeg",
     alt: "Spécialité Bánh Mì Vietnam – Fr 12.-",
+    tab: "sandwichs",
   },
 ];
 
@@ -63,12 +65,25 @@ export default function PromoBanners() {
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
               className="w-full"
             >
-              <img
-                src={imgSrc(banners[current].src)}
-                alt={banners[current].alt}
-                className="w-full h-auto block"
-                style={{ maxHeight: "70vh", objectFit: "contain", margin: "0 auto" }}
-              />
+              <button
+                type="button"
+                className="w-full block focus:outline-none"
+                style={{ cursor: banners[current].tab ? "pointer" : "default" }}
+                onClick={() => {
+                  const banner = banners[current];
+                  if (banner.tab) {
+                    window.dispatchEvent(new CustomEvent("open-carte-tab", { detail: banner.tab }));
+                  }
+                  document.getElementById("carte")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <img
+                  src={imgSrc(banners[current].src)}
+                  alt={banners[current].alt}
+                  className="w-full h-auto block"
+                  style={{ maxHeight: "70vh", objectFit: "contain", margin: "0 auto" }}
+                />
+              </button>
             </motion.div>
           </AnimatePresence>
 

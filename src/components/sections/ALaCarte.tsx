@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { imgSrc } from "@/lib/utils";
 import menuData from "@/data/menu.json";
@@ -396,6 +396,15 @@ export default function ALaCarte() {
   const [activeTab, setActiveTab] = useState<Tab>("soupes");
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const tab = (e as CustomEvent<string>).detail as Tab;
+      if (tabs.some((t) => t.id === tab)) setActiveTab(tab);
+    };
+    window.addEventListener("open-carte-tab", handler);
+    return () => window.removeEventListener("open-carte-tab", handler);
+  }, []);
 
   const ActivePanel = panels[activeTab];
 
