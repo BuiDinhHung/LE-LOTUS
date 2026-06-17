@@ -62,14 +62,23 @@ function MenuCard({
                         bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(0,0,0,0.06)_100%)]
                         pointer-events-none" />
 
-        <motion.img
-          src={imgSrc(item.image)}
-          alt={item.nom}
-          loading="lazy"
-          className="w-full h-full object-cover object-center"
-          style={item.imageRotate ? { transform: `rotate(${item.imageRotate}deg) scale(1.1)` } : undefined}
-          whileHover={item.imageRotate ? undefined : { scale: 1.06, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
-        />
+        {item.imageRotate ? (
+          <img
+            src={imgSrc(item.image)}
+            alt={item.nom}
+            loading="lazy"
+            className="w-full h-full object-cover object-center"
+            style={{ transform: `rotate(${item.imageRotate}deg) scale(1.1)` }}
+          />
+        ) : (
+          <motion.img
+            src={imgSrc(item.image)}
+            alt={item.nom}
+            loading="lazy"
+            className="w-full h-full object-cover object-center"
+            whileHover={{ scale: 1.06, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
+          />
+        )}
 
         {/* Steam effect for soups */}
         {showSteam && (
