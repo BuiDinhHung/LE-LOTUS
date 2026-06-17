@@ -194,7 +194,7 @@ function SandwichsPanel() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
       {items.map((item, i) => (
-        <MenuCard key={item.id} item={item} index={i} rotateImage={item.id === "sw1"} />
+        <MenuCard key={item.id} item={item} index={i} />
       ))}
     </div>
   );

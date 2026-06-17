@@ -78,6 +78,7 @@ export default function BanhMiPopup() {
                 <button
                   onClick={() => {
                     close();
+                    window.dispatchEvent(new CustomEvent("open-carte-tab", { detail: "sandwichs" }));
                     document
                       .querySelector("#carte")
                       ?.scrollIntoView({ behavior: "smooth" });
