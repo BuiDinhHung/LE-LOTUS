@@ -50,33 +50,31 @@ export default function About() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
-            className="relative"
+            className="relative pb-12"
           >
             {/* Main image */}
             <motion.div
               variants={fadeUp}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="relative aspect-[4/5] overflow-hidden shadow-2xl shadow-dark/15"
+              className="relative overflow-hidden shadow-2xl shadow-dark/15 -mx-[7.5%] w-[115%]"
             >
               <img
-                src={imgSrc("WhatsApp Image 2026-06-12 at 13.09.45 (2).jpeg")}
+                src={imgSrc("phobo.png")}
                 alt="Cuisine vietnamienne Le Lotus"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto block hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent" />
             </motion.div>
 
             {/* Floating secondary image */}
             <motion.div
               variants={fadeUp}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -bottom-8 -right-6 w-44 md:w-56 aspect-square overflow-hidden
-                         shadow-2xl shadow-dark/20 border-4 border-cream"
+              className="absolute -bottom-8 -right-6 w-44 md:w-52 aspect-square overflow-hidden
+                         shadow-xl shadow-dark/10"
             >
               <img
-                src={imgSrc("WhatsApp Image 2026-06-12 at 13.09.44 (4).jpeg")}
+                src={imgSrc("mixaotom.png")}
                 alt="Plats vietnamiens Le Lotus"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
@@ -95,15 +93,6 @@ export default function About() {
               className="absolute -top-3 -left-3 w-24 h-24 border border-copper/15"
             />
 
-            {/* Badge */}
-            <motion.div
-              variants={fadeUp}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="absolute top-6 left-6 bg-copper text-white px-4 py-3"
-            >
-              <p className="text-xs tracking-[0.2em] uppercase font-medium">Depuis</p>
-              <p className="font-serif text-2xl leading-none">2020</p>
-            </motion.div>
           </motion.div>
 
           {/* Text */}
@@ -157,10 +146,9 @@ export default function About() {
               transition={{ duration: 0.7 }}
               className="text-dark/70 leading-relaxed mb-10 text-[15px]"
             >
-              Nos recettes familiales transmises de génération en génération vous feront
-              voyager au cœur du Vietnam. Que ce soit pour un repas sur place, à emporter
-              ou pour un événement traiteur, <em>Le Lotus</em> met tout son savoir-faire
-              à votre service.
+              Chaque plat est préparé avec passion, à partir d&apos;ingrédients frais et de recettes
+              vietnamiennes authentiques. Notre objectif est de vous faire découvrir les saveurs
+              du Vietnam à travers une cuisine faite maison, généreuse et pleine d&apos;amour.
             </motion.p>
 
             {/* Features grid */}

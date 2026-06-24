@@ -5,15 +5,10 @@ import { MapPin, Phone, Facebook, Instagram, Clock, ArrowUp } from "lucide-react
 function LotusLogoFooter() {
   return (
     <img
-      src="/images/b2354c6f-03fc-4264-bc68-27805167adab.png"
+      src="/images/logo-banner.jpeg"
       alt="Le Lotus"
-      className="w-12 h-12"
-      style={{
-        objectFit: "contain",
-        mixBlendMode: "screen",
-        maskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 38%, transparent 100%)",
-        WebkitMaskImage: "radial-gradient(ellipse 92% 88% at 50% 56%, black 38%, transparent 100%)",
-      }}
+      className="h-14 w-auto max-w-[220px]"
+      style={{ objectFit: "contain" }}
     />
   );
 }
@@ -40,14 +35,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
+            <div className="mb-5">
               <LotusLogoFooter />
-              <div>
-                <p className="font-serif text-2xl tracking-[0.15em]">LE LOTUS</p>
-                <p className="text-[10px] tracking-[0.3em] uppercase text-copper/80">
-                  Spécialités Vietnamiennes
-                </p>
-              </div>
             </div>
             <p className="text-white/45 text-sm leading-relaxed mb-6">
               Restaurant vietnamien authentique au cœur de Fribourg.
@@ -130,7 +119,7 @@ export default function Footer() {
                     href="tel:0264223571"
                     className="text-sm text-white/80 hover:text-copper transition-colors duration-200 block"
                   >
-                    026 422 35 71
+                    026 424 35 71
                   </a>
                   <a
                     href="tel:0791707969"

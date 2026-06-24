@@ -34,7 +34,7 @@ export default function Hero() {
         className="absolute inset-0 scale-[1.15] origin-center"
       >
         <img
-          src={imgSrc("WhatsApp Image 2026-06-12 at 13.09.44 (4).jpeg")}
+          src={imgSrc("cơm tấm.png")}
           alt="Le Lotus – Restaurant Vietnamien à Fribourg"
           className="w-full h-full object-cover object-center"
           loading="eager"

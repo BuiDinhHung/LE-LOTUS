@@ -5,7 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { imgSrc } from "@/lib/utils";
 import menuData from "@/data/menu.json";
 
-type Tab = "entrees" | "soupes" | "plats" | "sandwichs" | "combo" | "boissons";
+type Tab = "entrees" | "soupes" | "plats" | "sandwichs" | "combo" | "boissons" | "desserts";
 
 const tabs: { id: Tab; label: string; emoji: string }[] = [
   { id: "entrees",   label: "Entrées",         emoji: "🥟" },
@@ -13,6 +13,7 @@ const tabs: { id: Tab; label: string; emoji: string }[] = [
   { id: "plats",     label: "Plats Principaux", emoji: "🍽️" },
   { id: "sandwichs", label: "Bánh Mì",          emoji: "🥖" },
   { id: "combo",     label: "Combo",            emoji: "🍱" },
+  { id: "desserts",  label: "Desserts",         emoji: "🍮" },
   { id: "boissons",  label: "Boissons",         emoji: "🧋" },
 ];
 
@@ -319,6 +320,66 @@ function BoissonAvecImage({
   );
 }
 
+function DessertCard({ item, index }: { item: MenuItem; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40, scale: 0.96 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.55, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+      whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+      className="group relative bg-white border border-dark/5 overflow-hidden cursor-default
+                 transition-shadow duration-500
+                 hover:shadow-[0_24px_60px_-8px_rgba(212,80,32,0.22)]"
+    >
+      <div className="relative overflow-hidden bg-[#f8f6f1]" style={{ aspectRatio: "1/1" }}>
+        <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100
+                        bg-gradient-to-t from-amber-900/15 via-transparent to-transparent
+                        transition-opacity duration-500 pointer-events-none" />
+        <motion.img
+          src={imgSrc(item.image)}
+          alt={item.nom}
+          loading="lazy"
+          className="w-full h-full object-contain p-3"
+          whileHover={{ scale: 1.05, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
+        />
+        {item.tag && (
+          <span className="absolute top-3 left-3 z-20 px-2.5 py-1 text-[10px]
+                           tracking-[0.15em] uppercase font-semibold shadow-sm bg-copper text-white">
+            {item.tag}
+          </span>
+        )}
+      </div>
+      <div className="p-5 relative">
+        <div className="absolute top-0 left-5 right-5 h-px
+                        bg-copper/0 group-hover:bg-copper/20 transition-colors duration-500" />
+        <h3 className="font-serif text-dark text-[17px] leading-tight mb-1.5
+                       group-hover:text-copper transition-colors duration-300">
+          {item.nom}
+        </h3>
+        <p className="text-dark/55 text-xs leading-relaxed mb-4">{item.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="font-serif text-copper text-lg font-medium">{item.prix}</span>
+          <span className="h-px bg-copper/25 transition-all duration-500
+                           w-6 group-hover:w-12 group-hover:bg-copper" />
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-copper via-amber-400 to-copper
+                      w-0 group-hover:w-full transition-all duration-700 ease-out" />
+    </motion.div>
+  );
+}
+
+function DessertsPanel() {
+  const items = (menuData.alaCarte as unknown as { desserts: MenuItem[] }).desserts;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {items.map((item, i) => (
+        <DessertCard key={item.id} item={item} index={i} />
+      ))}
+    </div>
+  );
+}
+
 function BoissonPanel() {
   return (
     <div className="space-y-12">
@@ -397,6 +458,7 @@ const panels = {
   plats:     PlatsPanel,
   sandwichs: SandwichsPanel,
   combo:     ComboPanel,
+  desserts:  DessertsPanel,
   boissons:  BoissonPanel,
 } as const;
 
@@ -435,7 +497,7 @@ export default function ALaCarte() {
             <div className="w-12 h-px bg-copper/50" />
           </div>
           <p className="text-dark/55 text-sm max-w-lg mx-auto leading-relaxed">
-            Tous nos plats sont préparés <strong>fait maison</strong> à partir de produits
+            Tous nos plats sont <strong>fait maison</strong> à partir de produits
             frais, dans le respect des traditions culinaires vietnamiennes.
           </p>
         </motion.div>
@@ -494,6 +556,16 @@ export default function ALaCarte() {
           </motion.div>
         </AnimatePresence>
 
+        {/* Bon appétit */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="text-center font-serif italic text-dark/50 text-sm mt-10"
+        >
+          Bon appétit et à bientôt 🌸
+        </motion.p>
+
         {/* Bottom note */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -510,7 +582,7 @@ export default function ALaCarte() {
             <strong className="text-copper not-italic">à emporter</strong>
           </p>
           <p className="text-dark/40 text-xs tracking-wider relative z-10">
-            Merci de nous appeler pour votre commande · 026 422 35 71 · 079 170 79 69
+            Merci de nous appeler pour votre commande · 026 424 35 71 · 079 170 79 69
           </p>
         </motion.div>
       </div>

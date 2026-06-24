@@ -51,13 +51,13 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-28 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-20 flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => handleNavClick("#accueil")}
             className="group"
           >
-            <LotusLogo className="h-24 w-auto transition-all duration-500" />
+            <LotusLogo className="h-16 w-auto max-w-[260px] transition-all duration-500" />
           </button>
 
           {/* Desktop Nav */}
@@ -84,7 +84,7 @@ export default function Navbar() {
               }`}
             >
               <Phone size={13} />
-              026 422 35 71
+              026 424 35 71
             </a>
             <a
               href="#carte"
@@ -125,7 +125,7 @@ export default function Navbar() {
             {/* Header */}
             <div className="flex items-center justify-between px-6 h-20 border-b border-white/10">
               <div className="flex items-center">
-                <LotusLogo className="h-12 w-auto" />
+                <LotusLogo className="h-10 w-auto max-w-[180px]" />
               </div>
               <button
                 onClick={() => setMenuOpen(false)}
@@ -159,7 +159,7 @@ export default function Navbar() {
                 className="flex items-center gap-3 text-white/60 hover:text-copper transition-colors"
               >
                 <Phone size={16} />
-                <span className="text-sm tracking-wider">026 422 35 71</span>
+                <span className="text-sm tracking-wider">026 424 35 71</span>
               </a>
               <a
                 href="tel:0791707969"
@@ -185,7 +185,7 @@ export default function Navbar() {
 function LotusLogo({ className }: { className?: string }) {
   return (
     <img
-      src="/images/logo.png"
+      src="/images/logo-banner.jpeg"
       alt="Le Lotus"
       className={className}
       style={{ objectFit: "contain" }}

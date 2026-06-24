@@ -118,7 +118,7 @@ export default function Hours() {
                 />
                 <div>
                   <span className="text-sm font-medium text-dark group-hover:text-copper transition-colors duration-200">
-                    026 422 35 71
+                    026 424 35 71
                   </span>
                   <p className="text-xs text-dark/40">Restaurant</p>
                 </div>
