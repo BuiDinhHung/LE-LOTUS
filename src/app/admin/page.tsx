@@ -89,6 +89,13 @@ export default function AdminMenuPage() {
         <p className="mt-8 text-xs text-[#1a1a1a]/30 text-center tracking-wide">
           La sélection est sauvegardée localement dans ce navigateur.
         </p>
+
+        {/* Signature */}
+        <div className="mt-16 pt-8 border-t border-[#d45020]/15 text-center">
+          <p className="text-xs text-[#1a1a1a]/30 tracking-wide">
+            Copyright © 2026 Hoangcaster
+          </p>
+        </div>
       </div>
     </div>
   );
