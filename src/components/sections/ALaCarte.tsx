@@ -51,7 +51,7 @@ function MenuCard({
                  hover:shadow-[0_24px_60px_-8px_rgba(212,80,32,0.22)]"
     >
       {/* ── Image zone ── */}
-      <div className="relative overflow-hidden bg-[#f8f6f1] food-shimmer" style={{ aspectRatio: "4/3" }}>
+      <div className="relative overflow-hidden bg-[#f8f6f1] food-shimmer" style={{ aspectRatio: "1/1" }}>
 
         {/* Warm colour overlay on hover */}
         <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100
@@ -68,7 +68,7 @@ function MenuCard({
             src={imgSrc(item.image)}
             alt={item.nom}
             loading="lazy"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain"
             style={{ transform: `rotate(${item.imageRotate}deg) scale(1.1)` }}
           />
         ) : (
@@ -76,7 +76,7 @@ function MenuCard({
             src={imgSrc(item.image)}
             alt={item.nom}
             loading="lazy"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain"
             whileHover={{ scale: 1.06, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } }}
           />
         )}
