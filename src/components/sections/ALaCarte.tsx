@@ -140,15 +140,27 @@ function MenuCard({
         </h3>
         <p className="text-dark/55 text-xs leading-relaxed mb-4">{item.description}</p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <motion.span
             whileHover={{ scale: 1.06 }}
-            className="font-serif text-copper text-lg font-medium"
+            className="font-serif text-copper text-lg font-medium shrink-0"
           >
             {item.prix}
           </motion.span>
-          <span className="h-px bg-copper/25 transition-all duration-500
-                           w-6 group-hover:w-12 group-hover:bg-copper" />
+          <div className="flex items-center gap-2 overflow-hidden min-w-0">
+            <span className="h-px w-4 shrink-0 bg-copper/25
+                             group-hover:bg-copper transition-colors duration-500" />
+            <motion.span
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.07 + 0.35, duration: 0.6, ease: "easeOut" }}
+              className="font-serif italic text-[9px] tracking-[0.14em] whitespace-nowrap
+                         text-dark/30 group-hover:text-copper/70
+                         transition-colors duration-500"
+            >
+              Bon appétit et à bientôt 🌸
+            </motion.span>
+          </div>
         </div>
       </div>
 
