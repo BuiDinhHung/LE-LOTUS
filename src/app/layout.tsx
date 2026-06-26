@@ -82,7 +82,7 @@ const jsonLd = {
   servesCuisine: "Vietnamese",
   hasMap: "https://maps.app.goo.gl/GUH5LfAkEWomG5Ei9",
   sameAs: [
-    "https://www.facebook.com/p/Le-Lotus-take-away-100057256187554/",
+    "https://www.facebook.com/share/1E2WbZfnWz/",
     "https://www.instagram.com/lelotustakeaway/",
   ],
   priceRange: "Fr 18 – Fr 22",

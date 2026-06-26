@@ -9,14 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#fdf8ee",
-        dark: "#1c1a14",
-        copper: "#d45020",
-        "copper-light": "#e87038",
-        "copper-dark": "#a83c14",
-        sage: "#2d5416",
-        "sage-light": "#3e6e1e",
-        "sage-dark": "#1c3a0c",
+        // Neutral beige / taupe spa palette
+        cream: "#f6f3ee",        // off-white background
+        "cream-deep": "#efe9e0",  // slightly deeper panel tone
+        dark: "#2e2a24",         // espresso text
+        muted: "#7c7468",        // soft taupe-grey for secondary text
+        copper: "#b09373",       // soft bronze accent (name kept for reuse)
+        "copper-light": "#c2a98c",
+        "copper-dark": "#97795a",
+        sage: "#8a9a7b",
+        "sage-light": "#a3b095",
+        "sage-dark": "#6e7d60",
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],

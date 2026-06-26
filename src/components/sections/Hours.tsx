@@ -143,7 +143,7 @@ export default function Hours() {
             <p className="label-copper mb-4">Réseaux Sociaux</p>
             <div className="flex flex-col gap-3 justify-center lg:justify-start">
               <a
-                href="https://www.facebook.com/p/Le-Lotus-take-away-100057256187554/"
+                href="https://www.facebook.com/share/1E2WbZfnWz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-5 py-3.5

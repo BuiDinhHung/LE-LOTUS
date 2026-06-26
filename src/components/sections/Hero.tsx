@@ -33,10 +33,19 @@ export default function Hero() {
         style={{ y: bgY }}
         className="absolute inset-0 scale-[1.15] origin-center"
       >
+        {/* Mobile background */}
         <img
-          src={imgSrc("cơm tấm.png")}
+          src={imgSrc("backroundmobile.png")}
           alt="Le Lotus – Restaurant Vietnamien à Fribourg"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center sm:hidden"
+          loading="eager"
+          fetchPriority="high"
+        />
+        {/* Desktop background */}
+        <img
+          src={imgSrc("backrounddesktop.png")}
+          alt="Le Lotus – Restaurant Vietnamien à Fribourg"
+          className="w-full h-full object-cover object-center hidden sm:block"
           loading="eager"
           fetchPriority="high"
         />
@@ -66,10 +75,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-[72px] sm:text-[96px] md:text-[120px] lg:text-[144px]
-                     text-white tracking-[0.15em] leading-none mb-2"
+          className="mb-2"
         >
-          LE LOTUS
+          <span className="sr-only">Le Lotus</span>
+          <img
+            src={imgSrc("lelotus.png")}
+            alt="Le Lotus"
+            className="w-[280px] sm:w-[380px] md:w-[480px] lg:w-[560px] h-auto mx-auto"
+            style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.45))" }}
+          />
         </motion.h1>
 
         {/* Decorative line */}

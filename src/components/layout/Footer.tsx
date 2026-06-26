@@ -38,14 +38,10 @@ export default function Footer() {
             <div className="mb-5">
               <LotusLogoFooter />
             </div>
-            <p className="text-white/45 text-sm leading-relaxed mb-6">
-              Restaurant vietnamien authentique au cœur de Fribourg.
-              Cuisine fait maison depuis 2020.
-            </p>
             {/* Social */}
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/p/Le-Lotus-take-away-100057256187554/"
+                href="https://www.facebook.com/share/1E2WbZfnWz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center border border-white/10

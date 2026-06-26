@@ -238,7 +238,7 @@
         "id": "d1",
         "nom": "Banh Khoai My Nuong",
         "description": "Gâteau de manioc maison",
-        "prix": "",
+        "prix": "Fr 5.-",
         "image": "banhmykhoainuong.jpg",
         "tag": "Maison",
         "portion": null
@@ -277,14 +277,14 @@
           "id": "b1",
           "nom": "Thé Froid Pêche Citron Maison",
           "description": "Thé glacé artisanal à la pêche et citron, préparé chaque jour",
-          "prix": "Fr 5.-",
+          "prix": "Fr 6.-",
           "image": "Thé froid  péche avec citron ( fait maison).png"
         },
         {
           "id": "b2",
           "nom": "Thé Glacé Violet au Litchi",
           "description": "Thé aux fleurs de papillon bleue avec des notes de litchi, fait maison",
-          "prix": "Fr 5.-",
+          "prix": "Fr 6.-",
           "image": "Thé glacé violet au Lichi.png"
         },
         {
