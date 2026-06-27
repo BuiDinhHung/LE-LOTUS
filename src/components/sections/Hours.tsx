@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Clock, MapPin, Phone, Facebook, Instagram } from "lucide-react";
+import { Clock, MapPin, Phone, Facebook } from "lucide-react";
 
 export default function Hours() {
   const ref = useRef<HTMLDivElement>(null);
@@ -153,18 +153,6 @@ export default function Hours() {
                 <Facebook size={18} className="shrink-0" />
                 <span className="text-sm font-medium">Facebook</span>
                 <span className="ml-auto text-white/60 group-hover:translate-x-1 transition-transform duration-200 text-xs">@LeLotus</span>
-              </a>
-              <a
-                href="https://www.instagram.com/lelotustakeaway/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-5 py-3.5
-                           bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white
-                           hover:opacity-90 transition-all duration-200 group"
-              >
-                <Instagram size={18} className="shrink-0" />
-                <span className="text-sm font-medium">Instagram</span>
-                <span className="ml-auto text-white/70 group-hover:translate-x-1 transition-transform duration-200 text-xs">@lelotustakeaway</span>
               </a>
             </div>
 

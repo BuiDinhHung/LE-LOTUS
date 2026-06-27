@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Facebook, Instagram, Clock, ArrowUp } from "lucide-react";
+import { MapPin, Phone, Facebook, Clock, ArrowUp } from "lucide-react";
 
 function LotusLogoFooter() {
   return (
@@ -50,17 +50,6 @@ export default function Footer() {
                 aria-label="Facebook Le Lotus"
               >
                 <Facebook size={15} />
-              </a>
-              <a
-                href="https://www.instagram.com/lelotustakeaway/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center border border-white/10
-                           text-white/50 hover:text-white hover:border-copper hover:text-copper
-                           transition-all duration-300"
-                aria-label="Instagram Le Lotus"
-              >
-                <Instagram size={15} />
               </a>
             </div>
           </div>

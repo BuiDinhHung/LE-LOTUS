@@ -83,7 +83,6 @@ const jsonLd = {
   hasMap: "https://maps.app.goo.gl/GUH5LfAkEWomG5Ei9",
   sameAs: [
     "https://www.facebook.com/share/1E2WbZfnWz/",
-    "https://www.instagram.com/lelotustakeaway/",
   ],
   priceRange: "Fr 18 – Fr 22",
 };
