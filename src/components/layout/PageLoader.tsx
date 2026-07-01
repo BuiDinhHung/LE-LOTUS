@@ -89,7 +89,13 @@ export default function PageLoader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="font-serif text-white text-3xl tracking-[0.4em]">LE LOTUS</span>
+            <span className="sr-only">Le Lotus</span>
+            <img
+              src="/images/lelotus.png"
+              alt="Le Lotus"
+              className="w-[200px] md:w-[260px] h-auto"
+              style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.45))" }}
+            />
             <div className="flex items-center gap-3">
               <div className="w-8 h-px bg-copper/50" />
               <span className="text-white/45 text-[10px] tracking-[0.3em] uppercase font-sans">

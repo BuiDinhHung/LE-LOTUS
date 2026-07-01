@@ -7,7 +7,7 @@ function LotusLogoFooter() {
     <img
       src="/images/logo-banner.jpeg"
       alt="Le Lotus"
-      className="h-14 w-auto max-w-[220px]"
+      className="h-24 w-auto max-w-[320px]"
       style={{ objectFit: "contain" }}
     />
   );
@@ -34,24 +34,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="mb-5">
+          <div className="lg:col-span-1 flex flex-col items-start">
+            <div className="mb-6">
               <LotusLogoFooter />
             </div>
             {/* Social */}
-            <div className="flex gap-3">
-              <a
-                href="https://www.facebook.com/share/1E2WbZfnWz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center border border-white/10
-                           text-white/50 hover:text-white hover:border-copper hover:text-copper
-                           transition-all duration-300"
-                aria-label="Facebook Le Lotus"
-              >
-                <Facebook size={15} />
-              </a>
-            </div>
+            <p className="text-xs tracking-[0.25em] uppercase text-copper mb-3 font-medium">
+              Suivez-nous
+            </p>
+            <a
+              href="https://www.facebook.com/share/1E2WbZfnWz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-4 py-2.5 border border-white/10
+                         text-white/60 hover:text-copper hover:border-copper
+                         transition-all duration-300"
+              aria-label="Facebook Le Lotus"
+            >
+              <Facebook size={16} />
+              <span className="text-sm tracking-wide">Facebook</span>
+            </a>
           </div>
 
           {/* Horaires */}

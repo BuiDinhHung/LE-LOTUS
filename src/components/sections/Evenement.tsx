@@ -155,16 +155,21 @@ export default function Evenement() {
             </a>
           </div>
 
-          {/* Decorative text */}
-          <motion.p
+          {/* Decorative logo */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-16 font-serif italic text-white/20 text-5xl md:text-7xl
-                       select-none pointer-events-none overflow-hidden"
+            className="mt-16 flex justify-center select-none pointer-events-none"
           >
-            Le Lotus
-          </motion.p>
+            <span className="sr-only">Le Lotus</span>
+            <img
+              src={imgSrc("lelotus.png")}
+              alt="Le Lotus"
+              className="w-[240px] md:w-[360px] h-auto opacity-30"
+              style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.45))" }}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>
